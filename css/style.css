@@ -1,3 +1,4 @@
+/* GERAL */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: "lato",sans-serif;
 }
 
+/* CORPO DA APLICAÇÃO */
 body {
     background: #4261cf;
     background: -moz-linear-gradient(45deg, #3023ae 0%, #53a0fd 100%);
@@ -32,12 +34,144 @@ body {
     background-color: #4261c8;
     padding: 2rem;
     border-radius: 1rem;
+    box-shadow: 3px 3px 15px #f44236;
 
 }
 
-/* IMC Form */
+/* IMC FORM */
 #calc-container h2 {
     text-align: center;
     margin-bottom: 2rem;
 
 }
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #ccc;
+}
+
+.form-control input {
+    padding: 1rem 0.6rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+.action-control {
+    display: flex;
+    justify-content: space-between; /* cada botão fica do seu lado */
+    margin-top: 2rem;
+    gap: 1rem; /* insere uma distancia entre os 2 elementos */
+
+}
+
+button {
+    text-transform: uppercase; /* o texto para caixa alta */
+    padding: 1rem 1.5rem;
+    background-color: #f44236;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.9;
+    border-radius: 1rem;
+    flex:1; /* inserindo esse felx 1, conseguimos ver a ação do gap:1rem;*/
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#clear-btn {
+    background-color: #444;
+}
+
+/* TABLE */
+#result-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#imc-number {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+#imc-info {
+    font-size: 1.5rem;
+    color: #ccc;
+
+}
+
+#result-container h3 {
+    margin-top: 1rem;
+    color: #dfdfdf;
+}
+
+#imc-table {
+    margin: 1.5rem 0;
+    font-size: 0.8rem;
+
+}
+
+.table-header{
+    font-weight: bold;
+    color: #ccc;    
+}
+
+.table-header,
+.table-data {
+    display: flex;
+    justify-content: space-around; /*para ter a mesam distancia entre eles*/
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #444;
+
+}
+
+.table-header h4,
+.table-data p {
+    flex: 1; /* Ajuda a centralizar os itens destes itens */
+}
+
+/* Acessa o 3º item destas div's, sem precisar de class ou id*/
+.table-header h4:nth-child(3), 
+.table-data p:nth-child(3) {
+    max-width: 80px;
+}
+
+#back-btn {
+    align-self: center; /* ajusta a largura e centralizar o botão */
+}
+
+
+/* CLASSES DE AUXILIO*/
+
+.good {
+    font-weight: bold;
+    color: #12db34;
+}
+
+.low {
+    color: #dbce12;
+}
+
+.medium {
+    color: #db6212;
+}
+
+.high {
+    color: #db1912;
+}
+
