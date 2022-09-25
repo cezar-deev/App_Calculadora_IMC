@@ -1,41 +1,42 @@
 // IMC DATA 
 
-const data = [   /* Lista de arrays como um objeto ou como se fosse uma API em JSON */
+/* Lista de arrays como um objeto ou como se fosse uma API em JSON */
+const data = [   
     {
         min:0,
         max:18.4,
-        classification:"Menor que 18,5",
+        classification: "Menor que 18,5",
         info: "Magreza",
-        Obesity:"0"
+        Obesity: "0"
     },
     {
         min:18.5,
         max:24.9,
-        classification:"Entre 18,5 e 24,9",
+        classification: "Entre 18,5 e 24,9",
         info: "Normal",
-        Obesity:"0"
+        Obesity: "0"
     },
     {
         min:25,
         max:29.9,
-        classification:"Entre 25,0 e 29,9",
+        classification: "Entre 25,0 e 29,9",
         info: "Sobrepeso",
-        Obesity:"I"
+        Obesity: "I"
     },
     {
         min:30,
         max:39.9,
-        classification:"Entre 30,0 a 39,9 ",
+        classification: "Entre 30,0 a 39,9 ",
         info: "Obesidade",
-        Obesity:"II"
+        Obesity: "II"
     },
     {
         min:40,
         max:99,
-        classification:"Maior que 40,0",
+        classification: "Maior que 40,0",
         info: "Obesidade Grave",
-        Obesity:"III"
-    },
+        Obesity: "III"
+    }
 ];
 
 
@@ -43,10 +44,10 @@ const data = [   /* Lista de arrays como um objeto ou como se fosse uma API em J
 // --- SELEÇÃO DE ELEMENTOS --- // 
 const imcTable = document.querySelector("#imc-table");
 
-const heightInput = document.querySelector("#height");
-const weightInput = document.querySelector("#weight");
-const calcBtn = document.querySelector("#calc-btn");
-const clearBtn = document.querySelector("#clear-btn");
+const heightInput = document.querySelector("#height"); // pegando o valro do input
+const weightInput = document.querySelector("#weight"); // pegando o valro do input
+const calcBtn = document.querySelector("#calc-btn"); // Peganado o botao
+const clearBtn = document.querySelector("#clear-btn"); // Peganado o botao
 
 
 // --- FUNÇÕES  --- //
@@ -70,7 +71,7 @@ function creatTable(data) {
         div.appendChild(Obesity) // Incluindo os itens dentro da div
 
         imcTable.appendChild(div);
-    })
+    });
 }
 
 
