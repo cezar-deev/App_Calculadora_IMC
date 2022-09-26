@@ -52,7 +52,7 @@ const clearBtn = document.querySelector("#clear-btn"); // Peganado o botao
 
 // --- FUNÇÕES  --- //
 function creatTable(data) {
-    data.forEach((item) => {
+    data.forEach( item => {
 
         const div = document.createElement("div") // criando uma div
         div.classList.add("table-data") // criando uma classe para div
@@ -61,10 +61,10 @@ function creatTable(data) {
         classification.innerText = item.classification; // Insrindo os dados do item na tag p
 
         const info = document.createElement("p"); // criando uma tag P
-        classification.innerText = item.info; // Insrindo os dados do item na tag p
+        info.innerText = item.info; // Insrindo os dados do item na tag p
 
         const Obesity = document.createElement("p"); // criando uma tag P
-        classification.innerText = item.Obesity; // Insrindo os dados do item na tag p
+        Obesity.innerText = item.Obesity; // Insrindo os dados do item na tag p
 
         div.appendChild(classification) // Incluindo os itens dentro da div
         div.appendChild(info) // Incluindo os itens dentro da div
